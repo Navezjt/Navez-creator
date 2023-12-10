@@ -2,7 +2,7 @@ name: M3U8_ACTION
 
 on:
   workflow_dispatch:
-  # Run 6 Hours after https://https://github.com/ericziethen/ez-iptvcat-scraper
+  # Run 6 Hours after https://https://github.com/Navezjt/ez-iptvcat-scraper
   # This should be a bit after midnight in Australia
   schedule:
     - cron: "0 18 * * *"
@@ -37,7 +37,7 @@ jobs:
 
       ### SETUP THE ENVIRONMENT
       - name: Setup Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v2
         with:
           python-version: '3.9'
 
