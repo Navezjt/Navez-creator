@@ -85,7 +85,7 @@ jobs:
       - name: Get Master M3U8 from M3U4U so it doesn't get auto deleted due to inactivity
         run: |
           echo "Command: './scripts/download_file_allow_failiure.sh "${{ secrets.M3U4U_M3U8_URL }}" "${EPG_TEMP_DIR}" "M3U8_Master_M3U4U.m3u8"'"
-          ./scripts/download_file.sh "${{ secrets.M3U4U_M3U8_URL }}" "${EPG_TEMP_DIR}" "M3U8_Master_M3U4U.m3u8"
+          ./scripts/download_file.sh "${{ M3U4U_M3U8_URL }}" "${EPG_TEMP_DIR}" "M3U8_Master_M3U4U.m3u8"
 
       - name: Get IPTVCat Release
         run: |
@@ -95,12 +95,12 @@ jobs:
       - name: Get EPG from M3U4U
         run: |
           echo "Command: './scripts/download_file_allow_failiure.sh "${{ secrets.M3U4U_EPG_URL_XML_GZ }}" "${EPG_TEMP_DIR}" "${{ secrets.M3U4U_EPG_FILE_NAME_XML_GZ }}"'"
-          ./scripts/download_file_allow_failiure.sh "${{ secrets.M3U4U_EPG_URL_XML_GZ }}" "${EPG_TEMP_DIR}" "${{ secrets.M3U4U_EPG_FILE_NAME_XML_GZ }}"
+          ./scripts/download_file_allow_failiure.sh "${{ M3U4U_EPG_URL_XML_GZ }}" "${EPG_TEMP_DIR}" "${{ secrets.M3U4U_EPG_FILE_NAME_XML_GZ }}"
 
       - name: Get Static Files from Dropbox
         run: |
           echo "Command: './scripts/download_file_allow_failiure.sh "${{ secrets.DROPBOX_STATIC_M3U8_INDONESIA }}" "${M3U8_STATIC_DIR}" "indonesia.m3u8"'"
-          ./scripts/download_file_allow_failiure.sh "${{ secrets.DROPBOX_STATIC_M3U8_INDONESIA }}" "${M3U8_STATIC_DIR}" "indonesia.m3u8"
+          ./scripts/download_file_allow_failiure.sh "${{ DROPBOX_STATIC_M3U8_INDONESIA }}" "${M3U8_STATIC_DIR}" "indonesia.m3u8"
 
           ls -alt "${M3U8_STATIC_DIR}"
 
@@ -144,15 +144,15 @@ jobs:
       - name: Add EPG URL to files
         run: |
           echo "Command: 'python ./scripts/add_epg_url_into_m3u8.py --epg_url "${{ secrets.DROPBOX_EPG_URL_XML_GZ }}" --m3u8_in_dir "${M3U8_DIR}" --m3u8_out_dir "${M3U8_DIR}"'"
-          python ./scripts/add_epg_url_into_m3u8.py --epg_url "${{ secrets.DROPBOX_EPG_URL_XML_GZ }}" --m3u8_in_dir "${M3U8_DIR}" --m3u8_out_dir "${M3U8_DIR}"
+          python ./scripts/add_epg_url_into_m3u8.py --epg_url "${{ DROPBOX_EPG_URL_XML_GZ }}" --m3u8_in_dir "${M3U8_DIR}" --m3u8_out_dir "${M3U8_DIR}"
 
       ### FILE UPLOADS ###
       - name: Upload EPG to dropbox
         run: |
           echo "Command: './scripts/upload_to_dropbox.sh "${EPG_TEMP_DIR}" "EPG" "********"'"
-          ./scripts/upload_to_dropbox.sh "${EPG_TEMP_DIR}" "EPG" "${{ secrets.DROPBOX_UPLOAD_TOKEN }}"
+          ./scripts/upload_to_dropbox.sh "${EPG_TEMP_DIR}" "EPG" "${{ DROPBOX_UPLOAD_TOKEN }}"
 
       - name: Upload m3u8 files to Dropbox
         run: |
           echo "Command: './scripts/upload_to_dropbox.sh "${M3U8_DIR}" "IPTV" "********"'"
-          ./scripts/upload_to_dropbox.sh "${M3U8_DIR}" "IPTV" "${{ secrets.DROPBOX_UPLOAD_TOKEN }}"
+          ./scripts/upload_to_dropbox.sh "${M3U8_DIR}" "IPTV" "${{ DROPBOX_UPLOAD_TOKEN }}"
