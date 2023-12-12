@@ -81,28 +81,7 @@ jobs:
           echo "Command: 'ls -alt ${M3U8_STATIC_DIR}'"
           ls -alt ${M3U8_STATIC_DIR}
 
-      ### DOWNLOAD REQUIRED DATA ###
-      - name: Get Master M3U8 from M3U4U so it doesn't get auto deleted due to inactivity
-        run: |
-          echo "Command: './scripts/download_file_allow_failiure.sh "${{ secrets.M3U4U_M3U8_URL }}" "${EPG_TEMP_DIR}" "M3U8_Master_M3U4U.m3u8"'"
-          ./scripts/download_file.sh "${{ secrets.M3U4U_M3U8_URL }}" "${EPG_TEMP_DIR}" "M3U8_Master_M3U4U.m3u8"
-
-      - name: Get IPTVCat Release
-        run: |
-          echo "Command: './scripts/iptvcat/get_iptvcat_scraper_release.sh "${IPTVCAT_DOWNLOAD_DIR}" "${IPTVCAT_DATE}" "${IPTVCAT_DATE_YESTERDAY}"'"
-          ./scripts/iptvcat/get_iptvcat_scraper_release.sh "${IPTVCAT_DOWNLOAD_DIR}" "${IPTVCAT_DATE}" "${IPTVCAT_DATE_YESTERDAY}"
-
-      - name: Get EPG from M3U4U
-        run: |
-          echo "Command: './scripts/download_file_allow_failiure.sh "${{ secrets.M3U4U_EPG_URL_XML_GZ }}" "${EPG_TEMP_DIR}" "${{ secrets.M3U4U_EPG_FILE_NAME_XML_GZ }}"'"
-          ./scripts/download_file_allow_failiure.sh "${{ secrets.M3U4U_EPG_URL_XML_GZ }}" "${EPG_TEMP_DIR}" "${{ secrets.M3U4U_EPG_FILE_NAME_XML_GZ }}"
-
-      - name: Get Static Files from Dropbox
-        run: |
-          echo "Command: './scripts/download_file_allow_failiure.sh "${{ secrets.DROPBOX_STATIC_M3U8_INDONESIA }}" "${M3U8_STATIC_DIR}" "indonesia.m3u8"'"
-          ./scripts/download_file_allow_failiure.sh "${{ secrets.DROPBOX_STATIC_M3U8_INDONESIA }}" "${M3U8_STATIC_DIR}" "indonesia.m3u8"
-
-          ls -alt "${M3U8_STATIC_DIR}"
+     
 
       ### PROCESS THE DATA ###
       - name: Convert IPTVCat (JSON to m3u8)
