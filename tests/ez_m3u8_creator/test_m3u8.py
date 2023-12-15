@@ -1,5 +1,5 @@
 
-import pytest
+import pytest 
 
 from ez_m3u8_creator import m3u8
 
