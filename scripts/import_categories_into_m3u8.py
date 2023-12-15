@@ -1,4 +1,4 @@
-"""Script to convert iptvcat json files to m3u8.""" 
+"""Script to convert iptvcat json files to m3u8."""
 
 import argparse
 import json
