@@ -1,6 +1,6 @@
 @echo off
 
-setlocal EnableDelayedExpansion
+setlocal EnableDelayedExpansion 
 
 echo Args: %*
 
