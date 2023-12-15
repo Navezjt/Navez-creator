@@ -1,4 +1,4 @@
-"""Script to convert m3u4u channel files to a fake m3u playlist."""
+"""Script to convert m3u4u channel files to a fake m3u playlist.""" 
 
 import argparse
 import os
