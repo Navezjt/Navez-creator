@@ -12,7 +12,7 @@ merge_m3u8_files () {
     local m3u8_merge_from_file=$2
     local json_check_file=$3
 
-    echo "### START Processing - '${m3u8_merge_into_file}' ###" 
+    echo "### START Processing - '${m3u8_merge_into_file}' ###"
 
     ls -alt "${m3u8_merge_into_file}"
     ls -alt "${json_check_file}"
