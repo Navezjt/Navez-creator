@@ -1,4 +1,4 @@
-"""Code to handle m3u8 file type.""" 
+"""Code to handle m3u8 file type."""
 
 import json
 import re
