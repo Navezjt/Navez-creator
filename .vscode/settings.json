@@ -1,7 +1,7 @@
 {
     "python.pythonPath": ".venv\\Scripts\\python.exe",
     "python.autoComplete.extraPaths": [
-        "${workspaceFolder}\\ez_m3u8_creator" 
+        "${workspaceFolder}\\ez_m3u8_creator"
     ],
 
     "editor.tabSize": 4,
