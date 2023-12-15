@@ -1,7 +1,7 @@
 
 
 
-<table> 
+<table>
     <tr>
         <td>Github Action</td>
         <td><img src='https://github.com/ericziethen/ez-m3u8-creator/workflows/CI/badge.svg'></td>
