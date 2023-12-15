@@ -1,1 +1,1 @@
-"""M3u8 Creator libraries.""" 
+"""M3u8 Creator libraries."""
