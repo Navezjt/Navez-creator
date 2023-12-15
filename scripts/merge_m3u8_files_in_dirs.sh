@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 
 ### Helper script to merge m3u8 files
