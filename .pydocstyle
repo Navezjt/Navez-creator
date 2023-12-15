@@ -1,4 +1,4 @@
-[pydocstyle] 
+[pydocstyle]
 inherit=false
 
 ; Ignore Dirs starting with "." or containing "migrations" or "tests"
