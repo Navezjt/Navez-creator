@@ -1,4 +1,4 @@
-"""Script to add an EPG url to m3u8 files.""" 
+"""Script to add an EPG url to m3u8 files."""
 
 import argparse
 import os
