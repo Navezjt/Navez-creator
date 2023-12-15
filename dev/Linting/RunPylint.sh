@@ -6,7 +6,7 @@
 run_pylint () {
     local lint_path=$1
 
-    echo "### PYLINT START - '$lint_path' ###"
+    echo "### PYLINT START - '$lint_path' ###" 
     pylint "$lint_path"
     local return_code=$?
 
