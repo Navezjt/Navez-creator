@@ -5,7 +5,7 @@ setlocal
 set PROJ_MAIN_DIR=%~dp0../..
 set PACKAGE_ROOT=ez_m3u8_creator
 
-set PYTHONPATH=%PYTHONPATH%;%PACKAGE_ROOT% 
+set PYTHONPATH=%PYTHONPATH%;%PACKAGE_ROOT%
 pushd "%PROJ_MAIN_DIR%"
 
 rem To see how to loop through multiple Command Line Arguments: https://www.robvanderwoude.com/parameters.php
