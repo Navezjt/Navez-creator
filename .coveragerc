@@ -1,4 +1,4 @@
-[run]
+[run] 
 omit =
     */tests/*
     *__init__*
