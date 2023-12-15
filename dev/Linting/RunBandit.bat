@@ -4,7 +4,7 @@ setlocal
 
 set BATCH_DIR=%~dp0
 set PROJ_MAIN_DIR=%BATCH_DIR%..\..
-set MODULE_PATH=%PROJ_MAIN_DIR%\ez_m3u8_creator
+set MODULE_PATH=%PROJ_MAIN_DIR%\ez_m3u8_creator 
 
 pushd "%PROJ_MAIN_DIR%"
 rem Exclusion via config file currently not working in bandit 1.6.2
