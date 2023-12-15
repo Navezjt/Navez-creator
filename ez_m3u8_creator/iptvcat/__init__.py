@@ -1,1 +1,1 @@
-"""IPTVCAT libraries.""" 
+"""IPTVCAT libraries."""
