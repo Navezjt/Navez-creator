@@ -1,4 +1,4 @@
-"""Handle data import and convertion for the iptvcat_scraper files."""
+"""Handle data import and convertion for the iptvcat_scraper files.""" 
 
 import json
 import os
