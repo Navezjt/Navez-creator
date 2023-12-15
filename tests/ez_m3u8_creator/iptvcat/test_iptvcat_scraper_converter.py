@@ -1,5 +1,5 @@
 
-import os 
+import os
 import pytest
 
 from ez_m3u8_creator.iptvcat import iptvcat_scraper_converter
