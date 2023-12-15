@@ -1,5 +1,5 @@
 
-"""Script to upload files in a folder via ftp."""
+"""Script to upload files in a folder via ftp.""" 
 
 import argparse
 import ftplib
