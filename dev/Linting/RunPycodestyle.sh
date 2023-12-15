@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MODULE_NAME=ez_m3u8_creator
-SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" 
 PROJ_MAIN_DIR=$SCRIPT_PATH/../..
 MODULE_PATH=$PROJ_MAIN_DIR/$MODULE_NAME
 
