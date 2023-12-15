@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "channel": "Channel 1", 
+        "channel": "Channel 1",
         "link": "Link.1",
         "country": "germany",
         "liveliness": "20",
