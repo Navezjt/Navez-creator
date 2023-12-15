@@ -1,7 +1,7 @@
 
 @echo off
 
-echo ##### Calling: "%~nx0" (%0)
+echo ##### Calling: "%~nx0" (%0) 
 
 setlocal
 
