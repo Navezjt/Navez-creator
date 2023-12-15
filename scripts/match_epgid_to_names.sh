@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 
 ### FOR NOW UST A HELPER SCRIPT WITH HARDCODED WITH IDS WE'RE LOOKING UP
