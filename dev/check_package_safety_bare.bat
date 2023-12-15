@@ -1,6 +1,6 @@
 @echo off
 
-rem the safety module throws a Unicode error on Travis, so we need a base version
+rem the safety module throws a Unicode error on Travis, so we need a base version 
 
 safety check --bare
 set return_code=%errorlevel%
