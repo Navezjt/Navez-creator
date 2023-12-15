@@ -1,3 +1,3 @@
 #!/bin/bash
 
-safety check --full-report 
+safety check --full-report
