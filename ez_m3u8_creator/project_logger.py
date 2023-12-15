@@ -4,7 +4,7 @@
 
 import logging.config
 
-logger = logging.getLogger(__name__)  # pylint: disable=invalid-name
+logger = logging.getLogger(__name__)  # pylint: disable=invalid-name 
 
 
 def setup_logger(log_file_path: str) -> None:
