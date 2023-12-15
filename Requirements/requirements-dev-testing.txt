@@ -5,7 +5,7 @@ pydocstyle
 pylint
 mypy
 
-# Testing tools 
+# Testing tools
 pytest
 pytest-cov
 codecov
